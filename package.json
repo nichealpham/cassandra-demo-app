@@ -1,0 +1,60 @@
+{
+  "name": "hackathon-starter",
+  "version": "4.3.0",
+  "description": "A boilerplate for Node.js web applications",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahat/hackathon-starter.git"
+  },
+  "author": "Sahat Yalkabov",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --reporter spec",
+    "postinstall": "npm rebuild node-sass",
+    "eslint": "eslint **/*.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chalk": "^2.1.0",
+    "express": "^4.15.4",
+    "express-status-monitor": "^1.0.1",
+    "express-validator": "^4.3.0",
+    "github": "^9.2.0",
+    "request": "^2.81.0",
+    "validator": "^8.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-chai-friendly": "^0.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.1",
+    "sinon-mongoose": "^2.0.2",
+    "supertest": "^3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "comma-dangle": 0,
+      "consistent-return": 0,
+      "no-param-reassign": 0,
+      "no-underscore-dangle": 0,
+      "no-shadow": 0,
+      "no-console": 0,
+      "no-plusplus": 0,
+      "no-unused-expressions": 0,
+      "chai-friendly/no-unused-expressions": 2
+    },
+    "env": {
+      "jasmine": true,
+      "mocha": true,
+      "node": true
+    },
+    "plugins": [
+      "chai-friendly"
+    ]
+  }
+}
