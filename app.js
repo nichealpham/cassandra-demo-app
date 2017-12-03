@@ -5,7 +5,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const expressValidator = require('express-validator');
-const expressStatusMonitor = require('express-status-monitor');
 const chalk = require('chalk');
 
 const app = express();
