@@ -1464,6 +1464,7 @@ var app = angular.module("app")
           // annotations: $scope.annotations,
         };
         $scope.records.push($scope.new_record);
+        console.log(JSON.stringify($scope.new_record));
         $window.localStorage["cassandra_records"] = JSON.stringify($scope.records);
         $window.localStorage[$scope.record_data.record_id] = JSON.stringify($scope.record_data);
         alert("Record uploaded successfully");
