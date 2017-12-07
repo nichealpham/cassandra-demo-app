@@ -9,8 +9,8 @@ var app = angular.module("app")
       name: "Cassandra express server",
       link: "http://103.15.51.249:1337",
     };
-    $scope.socket = io.connect($scope.local_server.link, { 'force new connection': true } );
-    $scope.heroku_socket = io.connect($scope.transaction_server.link, { 'force new connection': true } );
+    // $scope.socket = io.connect($scope.local_server.link, { 'force new connection': true } );
+    // $scope.heroku_socket = io.connect($scope.transaction_server.link, { 'force new connection': true } );
     $scope.socket.on("serialdevice_connected_sent_by_server", function(data) {
       jQuery("#page_loading").show();
       $scope.custom_timeout = $timeout(function() {
