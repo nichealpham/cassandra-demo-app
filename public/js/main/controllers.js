@@ -11,47 +11,47 @@ var app = angular.module("app")
     };
     // $scope.socket = io.connect($scope.local_server.link, { 'force new connection': true } );
     // $scope.heroku_socket = io.connect($scope.transaction_server.link, { 'force new connection': true } );
-    $scope.socket.on("serialdevice_connected_sent_by_server", function(data) {
-      jQuery("#page_loading").show();
-      $scope.custom_timeout = $timeout(function() {
-        jQuery("#page_loading").hide();
-        var obj = {
-          name: "USB Bluetooth Donggle",
-          icon: "images/usb.png",
-          detail_info: data,
-        };
-        $scope.connected_devices.push(obj);
-        $scope.$apply(function() {
-          $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
-        });
-        $timeout.cancel($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 2100);
-    });
-    $scope.socket.on("port_unplugged_successfully_sent_by_server", function(port) {
-      var ind = $scope.connected_devices.indexOf(port);
-      $scope.connected_devices.splice(ind, 1);
-      $scope.$apply(function() {
-        $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
-      });
-      $scope.close_message_box();
-      $scope.loading_message = "Connecting serial port device. Please wait...";
-      $scope.custom_timeout = $timeout(function() {
-        $scope.$apply(function() {
-          $scope.port_to_be_displayed_in_message_box = null;
-        });
-        $timeout.clear($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 800);
-    });
-    $scope.socket.on("port_closed_successfully_sent_by_server", function() {
-      $scope.custom_timeout = $timeout(function() {
-        $scope.open_message_box();
-        jQuery("#page_loading").hide();
-        $timeout.cancel($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 2100);
-    });
+    // $scope.socket.on("serialdevice_connected_sent_by_server", function(data) {
+    //   jQuery("#page_loading").show();
+    //   $scope.custom_timeout = $timeout(function() {
+    //     jQuery("#page_loading").hide();
+    //     var obj = {
+    //       name: "USB Bluetooth Donggle",
+    //       icon: "images/usb.png",
+    //       detail_info: data,
+    //     };
+    //     $scope.connected_devices.push(obj);
+    //     $scope.$apply(function() {
+    //       $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
+    //     });
+    //     $timeout.cancel($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 2100);
+    // });
+    // $scope.socket.on("port_unplugged_successfully_sent_by_server", function(port) {
+    //   var ind = $scope.connected_devices.indexOf(port);
+    //   $scope.connected_devices.splice(ind, 1);
+    //   $scope.$apply(function() {
+    //     $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
+    //   });
+    //   $scope.close_message_box();
+    //   $scope.loading_message = "Connecting serial port device. Please wait...";
+    //   $scope.custom_timeout = $timeout(function() {
+    //     $scope.$apply(function() {
+    //       $scope.port_to_be_displayed_in_message_box = null;
+    //     });
+    //     $timeout.clear($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 800);
+    // });
+    // $scope.socket.on("port_closed_successfully_sent_by_server", function() {
+    //   $scope.custom_timeout = $timeout(function() {
+    //     $scope.open_message_box();
+    //     jQuery("#page_loading").hide();
+    //     $timeout.cancel($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 2100);
+    // });
   };
   $scope.configure_on_pageload = function() {
     jQuery("#message_box").hide();
@@ -397,7 +397,7 @@ var app = angular.module("app")
         $scope.custom_timeout = $timeout(function() {
           $timeout.cancel($scope.custom_timeout);
           $scope.custom_timeout = null;
-          $scope.socket.emit("change_background_image_require_app_restart");
+          // $scope.socket.emit("change_background_image_require_app_restart");
         }, 600);
       };
     };
@@ -553,7 +553,7 @@ var app = angular.module("app")
       $scope.port_to_be_displayed_in_message_box = port;
       $scope.loading_message = "Closing serial port device. Please wait...";
       jQuery("#page_loading").show();
-      $scope.socket.emit("client_say_nodejs_to_remove_this_port", port);
+      // $scope.socket.emit("client_say_nodejs_to_remove_this_port", port);
     };
     $scope.show_if_length_larger_than_0 = function(obj) {
       if (obj.length > 0) {
@@ -827,63 +827,63 @@ var app = angular.module("app")
       name: "Cassandra express server",
       link: "http://103.15.51.249:1337",
     };
-    $scope.socket = io.connect($scope.local_server.link, { 'force new connection': true } );
-    $scope.heroku_socket = io.connect($scope.transaction_server.link, { 'force new connection': true } );
-    $scope.socket.on("serialdevice_connected_sent_by_server", function(data) {
-      jQuery("#page_loading").show();
-      $scope.custom_timeout = $timeout(function() {
-        jQuery("#page_loading").hide();
-        var obj = {
-          name: "USB Bluetooth Donggle",
-          icon: "images/usb.png",
-          detail_info: data,
-        };
-        $scope.connected_devices.push(obj);
-        $scope.$apply(function() {
-          $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
-        });
-        $timeout.cancel($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 2100);
-    });
-    $scope.socket.on("port_unplugged_successfully_sent_by_server", function(port) {
-      var ind = $scope.connected_devices.indexOf(port);
-      $scope.connected_devices.splice(ind, 1);
-      $scope.$apply(function() {
-        $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
-      });
-      $scope.close_message_box();
-      $scope.loading_message = "Connecting serial port device. Please wait...";
-      $scope.custom_timeout = $timeout(function() {
-        $scope.$apply(function() {
-          $scope.port_to_be_displayed_in_message_box = null;
-        });
-        $timeout.clear($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 800);
-    });
-    $scope.socket.on("port_closed_successfully_sent_by_server", function() {
-      $scope.custom_timeout = $timeout(function() {
-        $scope.open_message_box();
-        jQuery("#page_loading").hide();
-        $timeout.cancel($scope.custom_timeout);
-        $scope.custom_timeout = null;
-      }, 2100);
-    });
-    $scope.socket.on("save_record_to_local_server_successed", function(response) {
-      $scope.$apply(function() {
-        $scope.records.push(response);
-      });
-    });
+    // $scope.socket = io.connect($scope.local_server.link, { 'force new connection': true } );
+    // $scope.heroku_socket = io.connect($scope.transaction_server.link, { 'force new connection': true } );
+    // $scope.socket.on("serialdevice_connected_sent_by_server", function(data) {
+    //   jQuery("#page_loading").show();
+    //   $scope.custom_timeout = $timeout(function() {
+    //     jQuery("#page_loading").hide();
+    //     var obj = {
+    //       name: "USB Bluetooth Donggle",
+    //       icon: "images/usb.png",
+    //       detail_info: data,
+    //     };
+    //     $scope.connected_devices.push(obj);
+    //     $scope.$apply(function() {
+    //       $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
+    //     });
+    //     $timeout.cancel($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 2100);
+    // });
+    // $scope.socket.on("port_unplugged_successfully_sent_by_server", function(port) {
+    //   var ind = $scope.connected_devices.indexOf(port);
+    //   $scope.connected_devices.splice(ind, 1);
+    //   $scope.$apply(function() {
+    //     $scope.should_display_connected_devices = $scope.show_if_length_larger_than_0($scope.connected_devices);
+    //   });
+    //   $scope.close_message_box();
+    //   $scope.loading_message = "Connecting serial port device. Please wait...";
+    //   $scope.custom_timeout = $timeout(function() {
+    //     $scope.$apply(function() {
+    //       $scope.port_to_be_displayed_in_message_box = null;
+    //     });
+    //     $timeout.clear($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 800);
+    // });
+    // $scope.socket.on("port_closed_successfully_sent_by_server", function() {
+    //   $scope.custom_timeout = $timeout(function() {
+    //     $scope.open_message_box();
+    //     jQuery("#page_loading").hide();
+    //     $timeout.cancel($scope.custom_timeout);
+    //     $scope.custom_timeout = null;
+    //   }, 2100);
+    // });
+    // $scope.socket.on("save_record_to_local_server_successed", function(response) {
+    //   $scope.$apply(function() {
+    //     $scope.records.push(response);
+    //   });
+    // });
     if ($scope.userInfo) {
-      $scope.socket.emit("make_server_listen_to_this_socket", $scope.userInfo.user_id);
+      // $scope.socket.emit("make_server_listen_to_this_socket", $scope.userInfo.user_id);
       var pipline_name = "data_from_phone_" + $scope.userInfo.user_id + "_to_server";
       var pipline_result = "data_from_phone_" + $scope.userInfo.user_id + "_to_server_result_to_diagnosis_app";
       var test_message = "Hello " + $scope.userInfo.email;
-      $scope.socket.emit(pipline_name, test_message);
-      $scope.socket.on(pipline_result, function(data) {
-        console.log(data);
-      });
+      // $scope.socket.emit(pipline_name, test_message);
+      // $scope.socket.on(pipline_result, function(data) {
+      //   console.log(data);
+      // });
     };
     
   };
