@@ -1476,7 +1476,7 @@ var app = angular.module("app")
           record_data: $scope.record_data,
           user_info: $scope.userInfo,
         };
-        $scope.heroku_socket.emit("save_this_record_directly_to_database_server", package_to_database_server);
+        // $scope.heroku_socket.emit("save_this_record_directly_to_database_server", package_to_database_server);
       }, 1600);
     };
     $scope.transform_statistics = function(array) {
