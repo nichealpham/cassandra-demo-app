@@ -1464,6 +1464,7 @@ var app = angular.module("app")
           // annotations: $scope.annotations,
         };
         $scope.records.push($scope.new_record);
+        console.log(JSON.stringify($scope.record_data));
         $window.localStorage["cassandra_records"] = JSON.stringify($scope.records);
         $window.localStorage[$scope.record_data.record_id] = JSON.stringify($scope.record_data);
         alert("Record uploaded successfully");
@@ -1739,7 +1740,7 @@ var app = angular.module("app")
       $scope.records = JSON.parse($window.localStorage["cassandra_records"]);
       jQuery("#loading_records_spinner").hide();
     } else {
-      $scope.records = [JSON.parse('{"name":"Normal_and_healthy_ECG","date":"2017-12-07T04:49:52.045Z","uploaded_by":"Nguyen Pham-desktop","record_id":"record__511300__Normal_and_healthy_ECG__Hover_this,_then_run_analysis_and_export_report_to_see_demo_!","data_link":"http://localhost:8000\\bin\\saved-records\\Normal_and_healthy_ECG.txt","description":"Hover this, then run analysis and export report to see demo !","clinical_symptoms":{"chest_pain":false,"shortness_of_breath":false,"severe_sweating":false,"dizziness":false},"statistics":[4,73,23],"send_to_doctor":false,"user_info":{"email":"Nguyen Pham","password":"123","user_id":"663-161-8152"}}')];
+      $scope.records = [JSON.parse('{"name":"Normal_and_healthy_ECG","date":"2017-12-07T04:49:52.045Z","uploaded_by":"Nguyen Pham-desktop","record_id":"record__511300__Normal_and_healthy_ECG__Hover_this,_then_run_analysis_and_export_report_to_see_demo_!","data_link":"http://35.197.159.87:8000\\bin\\saved-records\\Normal_and_healthy_ECG.txt","description":"Hover this, then run analysis and export report to see demo !","clinical_symptoms":{"chest_pain":false,"shortness_of_breath":false,"severe_sweating":false,"dizziness":false},"statistics":[4,73,23],"send_to_doctor":false,"user_info":{"email":"Nguyen Pham","password":"123","user_id":"663-161-8152"}}')];
       jQuery("#loading_records_spinner").hide();
     };
     $scope.cancel_custom_timeout();
