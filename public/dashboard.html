@@ -25,6 +25,17 @@
   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather" />-->
   <link rel="stylesheet" type="text/css" href="lib/chartist/chartist-for-home.css">
   <link rel="stylesheet" type="text/css" href="lib/font-awesome/font-awesome.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110945148-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110945148-1');
+  </script>
+
 </head>
 <body style="background-image:url({{custom_background}});background-size:cover;box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);" class="ng-cloak window_no_drag">
     <div class="div_nen_den" style="" id="message_box">
@@ -224,11 +235,11 @@
         <form ng-submit="performLogin()">
           <h1 class="titular" style="font-family:Montserrat;font-weight:400;font-size:21px;">CASSANDRA DESKTOP</h1>
           <div class="input-container" style="width:460px;margin-left:90px;">
-              <input ng-model="user_email" required type="text" placeholder="User name" class="email text-input window_no_drag" style="font-family:Montserrat;width:100%;font-size:16px;padding-left:52px;background-color:rgba(0,0,0,0.21);border-radius:4px;">
+              <input ng-model="user_email" required type="text" placeholder="User email" class="email text-input window_no_drag" style="font-family:Montserrat;width:100%;font-size:16px;padding-left:52px;background-color:rgba(0,0,0,0.21);border-radius:4px;">
               <div style="margin-top:4px;margin-left:6px;" class="input-icon envelope-icon-acount"><span class="fontawesome-envelope scnd-font-color"></span></div>
           </div>
           <div class="input-container" style="width:460px;margin-left:90px;margin-top:-10px;">
-              <input ng-model="user_password" required type="text" placeholder="Password" class="password text-input window_no_drag" style="font-family:Montserrat;width:100%;font-size:16px;padding-left:52px;background-color:rgba(0,0,0,0.21);border-radius:4px;">
+              <input ng-model="user_password" required type="text" placeholder="User name" class="password text-input window_no_drag" style="font-family:Montserrat;width:100%;font-size:16px;padding-left:52px;background-color:rgba(0,0,0,0.21);border-radius:4px;">
               <div style="margin-top:4px;margin-left:6px;" class="input-icon password-icon"><span class="fontawesome-lock scnd-font-color"></span></div>
           </div>
           <button type="submit" class="sign-in button window_no_drag" style="border:none;color:white;cursor:pointer;font-family:Lato;font-size:14px;height:48px;line-height:40px;padding-left:16px;padding-right:16px;border-radius:4px;">SIGN IN</button>
