@@ -571,8 +571,8 @@ var app = angular.module("app")
       $scope.displayStyle = "material-pink";
     };
     $scope.show_login = function() {
-      $scope.user_email = "";
-      $scope.user_password = "";
+      $scope.user_email = "guest@gmail.com";
+      $scope.user_password = "Guest User";
       jQuery("#divMain").hide();
       jQuery("#divLogin").fadeIn(400);
     };
