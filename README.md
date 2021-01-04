@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">A web-based Electrocardiogram signal visualization tool. Demo is available <a href="https://drive.google.com/file/d/1xuYuao96Ice6CXGpbwkxWhhNfZSQ0VhG/view?usp=sharing" target="_blank">Here</a>.</h4>
+<h4 align="center">A web-based Electrocardiogram signal visualization tool. Demo is available <a href="http://cassandra-vi.ml" target="_blank">Here</a>.</h4>
 
 <p align="center">
   <a>
@@ -33,7 +33,7 @@
 </p>
 
 <a href="https://www.youtube.com/watch?v=out3r_w5Pfo&feature=youtu.be">
-    <img src="https://firebasestorage.googleapis.com/v0/b/gramme-8016f.appspot.com/o/public%2Fassets%2FCapture.PNG?alt=media&token=d7cc8432-e107-4ef3-8ed9-59fbdd8d34f3"
+    <img src="https://nichealpham.github.io/Cassandra-project/public/images/Capture2_1.png"
     alt="Gitter">
   </a>
 
@@ -106,5 +106,5 @@ MIT
 
 ---
 
-> [grammy.io](https://gramme.io)
+> [gramme.io](https://gramme.io)
 
