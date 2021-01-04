@@ -34,7 +34,7 @@
 
 <a href="https://www.youtube.com/watch?v=out3r_w5Pfo&feature=youtu.be">
     <img src="https://firebasestorage.googleapis.com/v0/b/gramme-8016f.appspot.com/o/public%2Fassets%2FCapture.PNG?alt=media&token=d7cc8432-e107-4ef3-8ed9-59fbdd8d34f3"
-    alt="Gitter" width="640">
+    alt="Gitter">
   </a>
 
 
