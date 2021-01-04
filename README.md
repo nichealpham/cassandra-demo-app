@@ -32,14 +32,27 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://firebasestorage.googleapis.com/v0/b/gramme-8016f.appspot.com/o/public%2Fassets%2FUntitled_%20Jan%204%2C%202021%203_19%20PM.gif?alt=media&token=f24fc09c-3cbe-43b7-ba57-beb2f2723593")
+<a href="https://www.youtube.com/watch?v=out3r_w5Pfo&feature=youtu.be">
+    <img src="https://firebasestorage.googleapis.com/v0/b/gramme-8016f.appspot.com/o/public%2Fassets%2FCapture.PNG?alt=media&token=d7cc8432-e107-4ef3-8ed9-59fbdd8d34f3"
+    alt="Gitter" width="640">
+  </a>
+
 
 ## Key Features
 
 * ECG Visualization
-* Records Management
-* Simple Analysis
-* PDF Export
+* ECG records management
+* Simple ECG analysis
+* Export report into PDF
+
+## About
+Cassandra is a Web-based software toolkit that provides an electrocardiographic (ECG) signal graphing solution dedicated for teaching and research purposes.
+
+Project recognitions:
++ 1st prize winner in National Instrument design for Young Entrepreneur competition 2018 with a total of $ 4,000 grand prize.
++ Product Demo Exhibition at Austin Texas - United State of America 2018
++ Top 5 products of the MIT Challenge 2018 competition
++ Top 3 products are funded from the Saigon Innovation Hub 
 
 ## How To Use
 
