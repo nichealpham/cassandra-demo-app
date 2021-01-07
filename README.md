@@ -3,11 +3,11 @@
   <br>
   <a href="https://gramme.io/cassand"><img src="https://nichealpham.github.io/Cassandra-project/public/images/startup.png" alt="Markdownify" width="200"></a>
   <br>
-  Cassandra ECG
+  ECG Visualization Tool
   <br>
 </h1>
 
-<h4 align="center">A web-based Electrocardiogram signal visualization tool. Demo is available <a href="http://cassandra-vi.ml" target="_blank">Here</a>.</h4>
+<h4 align="center">A web-based Electrocardiogram signal visualization tool. Demo is available <a href="https://ecg.gramme.io" target="_blank">Here</a>.</h4>
 
 <p align="center">
   <a>
@@ -22,21 +22,21 @@
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
-
+<a href="https://www.youtube.com/watch?v=YXcC-purj9E">
+    <img src="https://nichealpham.github.io/Cassandra-project/public/images/Capture2_1.png"
+    alt="Gitter">
+  </a>
 <p align="center">
-  <a href="#key-features">Key Features</a> •
+  • <a href="https://www.youtube.com/watch?v=YXcC-purj9E">Video demonstration</a>
+</p>
+<p align="center">
+  • <a href="#key-features">Key Features</a>
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> •
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
-
-<a href="https://www.youtube.com/watch?v=out3r_w5Pfo&feature=youtu.be">
-    <img src="https://nichealpham.github.io/Cassandra-project/public/images/Capture2_1.png"
-    alt="Gitter">
-  </a>
-
 
 ## Key Features
 
@@ -46,7 +46,7 @@
 * Export report into PDF
 
 ## About
-Cassandra is a Web-based software toolkit that provides an electrocardiographic (ECG) signal graphing solution dedicated for teaching and research purposes.
+Cassandra is a Web-based software toolkit that provides an electrocardiographic (ECG) signal visualization.
 
 Project recognitions:
 + 1st prize winner in National Instrument design for Young Entrepreneur competition 2018 with a total of $ 4,000 grand prize.
@@ -75,14 +75,19 @@ $ npm start
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-### 2. Run inside a Web Hosting
+### 2. Run as a Web Hosting
 Copy the files within the folder `public` into your web hosting.
 
 And that is it. Enjoy! 
 
-## Download
+### 3. Run as a Desktop app
 
-You can [download](https://drive.google.com/file/d/1xuYuao96Ice6CXGpbwkxWhhNfZSQ0VhG/view?usp=sharing) the latest installable version of Cassand and run as web-tool.
+You can [download](https://drive.google.com/file/d/1xuYuao96Ice6CXGpbwkxWhhNfZSQ0VhG/view?usp=sharing) the latest installable version of this app and run as web-tool.
+
+This build is made available with [nativefier](https://github.com/jiahaog/nativefier).
+```
+nativefier ecg.gramme.io
+```
 
 ## Emailware
 
@@ -98,7 +103,7 @@ This software uses the following open source packages:
 
 ## Support
 
-<a href="https://opencollective.com/cassand" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6NDTpoGl2cBt8vLBN71pOaVpPwMSH2kXdQ&usqp=CAU" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://www.patreon.com/gramme" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6NDTpoGl2cBt8vLBN71pOaVpPwMSH2kXdQ&usqp=CAU" alt="Buy Me A Coffee" style="height: 25px !important;width: 94px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;border-radius:4px;" ></a>
 
 ## License
 
@@ -106,5 +111,5 @@ MIT
 
 ---
 
-> [gramme.io](https://gramme.io)
+> Made by @Nicheal at [gramme.io](https://gramme.io)
 
