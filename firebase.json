@@ -1,10 +1,18 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "projects": {
+    "default": "sandrasoft-8fe2b"
+  },
+  "hosting": [
+    {
+      "public": "public",
+      "site": "ecg-sandrasoft",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
 }
